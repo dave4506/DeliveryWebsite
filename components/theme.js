@@ -1,5 +1,5 @@
 export default {
-  title:"David Sun",
+  title:"Shipmnt - Delivery Tracking App",
   colors:{
     primary:"#FF7F6C",
     mutedColor:"#F5EEED",
