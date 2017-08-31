@@ -23,6 +23,10 @@ const Header = ({theme}) => (
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="msapplication-TileImage" content="/static/favicon/ms-icon-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
+    <meta property="og:url"                content="https://shipmmnt.co" />
+    <meta property="og:title"              content="Shipmnt - The Modern Delivery Tracking App" />
+    <meta property="og:description"        content="Shipmnt is the new delivery tracking app on the block. With a refreshing UI, unique features, Shipmnt is the best package tracking app on iPhone and iPad." />
+    <meta property="og:image"              content="/static/Shot.png" />
     <style>{`
       body {
         background: ${theme.colors.primary};

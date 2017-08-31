@@ -1,4 +1,5 @@
 import styled, { ThemeProvider } from 'styled-components'
+import Scroll from 'react-scroll'; // Imports all Mixins
 import theme from '../components/theme'
 import Header from '../components/header'
 import Nav from '../components/nav'
@@ -17,6 +18,7 @@ import Block from '../components/grid'
 import Faq from '../components/grid/faq'
 import PriceCard from '../components/grid/price'
 import Feature from '../components/grid/feature'
+import {Link,Element} from 'react-scroll'
 
 const HeroCaption = Caption.extend`
   margin-bottom: 3em;
@@ -29,10 +31,10 @@ const HeroCaption = Caption.extend`
 export default () => (
   <ThemeProvider theme={theme}>
     <div>
-      <Paper>
+      <Paper id="paper">
         <Header/>
         <Nav/>
-        <Row>
+        <Row name="home">
           <Column>
             <Img src="/static/phone.gif"/>
           </Column>
@@ -46,7 +48,7 @@ export default () => (
         <Row>
           <Spacer/>
         </Row>
-        <Block title="Features">
+        <Block name="features" title="Features">
           <Row>
             <Column>
               <Feature
@@ -87,7 +89,7 @@ export default () => (
         <Row>
           <Spacer/>
         </Row>
-        <Block title="Pricing">
+        <Block name="pricing" title="Pricing">
           <Row>
             <Column>
               <PriceCard
@@ -130,7 +132,7 @@ export default () => (
         <Row>
           <Spacer/>
         </Row>
-        <Block title="FAQ">
+        <Block name="faq" title="FAQ">
           <Row>
             <Column>
               <Faq

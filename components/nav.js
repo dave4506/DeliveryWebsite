@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from 'styled-components'
 import A from './text/anchor'
-import Link from 'next/link'
 import Row from './grid/row'
+import {scroller} from 'react-scroll'
 
 const NavRow = Row.extend`
   max-width: ${props => props.theme.measurements.row};
@@ -44,13 +44,20 @@ const BrandLogo = styled.img`
   }
 `
 
+const scrollTo = (name) => {
+  scroller.scrollTo(name, {
+    duration: 600,
+    smooth: true,
+    offset: -80
+  })
+}
 export default () => (
   <NavRow>
     <BrandLogo src="static/logo.png"/>
     <LinksRow>
-      <NavLink>Pricing</NavLink>
-      <NavLink>Features</NavLink>
-      <NavLink>FAQ</NavLink>
+      <NavLink onClick={(e)=>{scrollTo("pricing")}}>Pricing</NavLink>
+      <NavLink onClick={(e)=>{scrollTo("features")}}>Features</NavLink>
+      <NavLink onClick={(e)=>{scrollTo("faq")}}>FAQ</NavLink>
     </LinksRow>
   </NavRow>
 )

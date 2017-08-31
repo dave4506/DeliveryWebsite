@@ -68,12 +68,10 @@ export default () => (
         <div>
           <FooterTitle>Legal</FooterTitle>
           <FooterLink>Privacy Policy</FooterLink>
-          <FooterLink>EULA</FooterLink>
         </div>
         <div>
           <FooterTitle>Social</FooterTitle>
           <FooterLink>Twitter</FooterLink>
-          <FooterLink>Email</FooterLink>
           <FooterLink>iTunes</FooterLink>
           <FooterLink>Facebook</FooterLink>
         </div>
